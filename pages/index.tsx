@@ -5,29 +5,35 @@ import data from "../data.json";
 import Image from "next/image";
 import Card from "@mui/material/Card";
 import Typography from "@mui/material/Typography";
+import CardMedia from "@mui/material/CardMedia";
 
 export default function Home() {
   // const [data, setData] = useState();
-  console.log(data);
+  // console.log(data);
   return (
     <>
       <NavBar />
-      <Card>
+      <Box
+        sx={{
+          display: "flex",
+          flexWrap: { md: "wrap" },
+          flexDirection: "column",
+          height: { md: "2836px" },
+          gap: { sm: "24px", md: "40px" },
+          padding: { xs: "24px" },
+        }}
+      >
         {data.map((item) => (
           <Box
             sx={{
-              padding: "24px",
               position: "relative",
             }}
           >
-            <Image
+            <CardMedia
+              component="img"
               src={`/${item.images.thumbnail}`}
-              alt="My Image"
-              height={250}
-              width={100}
               style={{ width: "100%", height: "100%" }}
             />
-
             <Box
               sx={{
                 position: "absolute",
@@ -44,7 +50,7 @@ export default function Home() {
             </Box>
           </Box>
         ))}
-      </Card>
+      </Box>
     </>
   );
 }

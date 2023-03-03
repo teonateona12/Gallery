@@ -11,7 +11,7 @@ export default function NavBar() {
         sx={{
           display: "flex",
           justifyContent: "space-between",
-          padding: "24px",
+          padding: { xs: "24px", md: "40px" },
         }}
       >
         <Image
