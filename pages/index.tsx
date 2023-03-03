@@ -18,8 +18,8 @@ export default function Home() {
           display: "flex",
           flexWrap: { md: "wrap" },
           flexDirection: "column",
-          height: { md: "2836px" },
-          gap: { sm: "24px", md: "40px" },
+          height: { md: "2836px", xl: "1497px" },
+          gap: { xs: "24px", md: "40px" },
           padding: { xs: "24px" },
         }}
       >
